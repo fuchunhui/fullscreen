@@ -1,7 +1,7 @@
 {
   "name": "fullscreen",
   "version": "0.1.0",
-  "description": "",
+  "description": "a talk about fullscreen api and pseudo-class.",
   "main": "index.ts",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,8 @@
   },
   "keywords": [
     "fullscreen",
-    "pseudo-class"
+    "pseudo-class",
+    "tablist"
   ],
   "author": "fuchunhui",
   "bugs": {},

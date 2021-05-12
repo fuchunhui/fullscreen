@@ -10,15 +10,17 @@ const TEMPLATE = `
   flex-direction: row;
   flex-wrap: nowrap;
   gap: var(--tab-gap, 0px);
+  color: var(--tab-nav-color, #333333)
 }
 .tab-nav ::slotted(*) {
-  padding: 5px;
-  border: 1px solid #ccc;
+  padding: 0 10px;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
   user-select: none;
   cursor: pointer;
 }
 .tab-nav ::slotted(.active) {
-  background: #efefef;
+  border-bottom-color: #4C84FF;
 }
 .tab-content ::slotted(*) {
   display: none;
