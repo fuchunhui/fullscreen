@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/fullscreen/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <link rel="icon" href="/fullscreen/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>fullscreen</title>
     <style>
       h3 {
         margin: 0;
       }
-      /* tab-list {
-        --tab-gap: 32px;
-        --tab-nav-color: green
-      } */
-      .tab-nav {
-        background-color: red;
-      }
     </style>
-    
-  <script type="module" crossorigin src="/fullscreen/assets/index.782cad1f.js"></script>
-  <link rel="stylesheet" href="/fullscreen/assets/index.43c4e811.css">
+  <script type="module" crossorigin src="/fullscreen/assets/index.54c377b5.js"></script>
 </head>
   <body>
     <main id="main">
-      <tab-list>
+      <tab-list> 
         <h3 slot="nav">原始需求</h3>
         <div slot="content">
           <p>
@@ -38,6 +29,28 @@
           </p>
         </div>
         <h3 slot="nav">❤新版本实现❤</h3>
+        <div slot="content">
+          <p>
+            伪类，伪元素介绍，新版本 API 
+          </p>
+        </div>
+      </tab-list>
+      <!-- TODO url 替换为固定链接 unpkg -->
+      <tab-list href="./src/tab-chrome.css"> 
+        <div slot="nav" class="chrome-tab">原始需求</div>
+        <div slot="content">
+          <p>
+            两个全屏，大框全屏后，还可以点击 panel 上的全屏按钮
+            实现外层带个 button 内部多个 panel 的示意图
+          </p>
+        </div>
+        <div slot="nav" class="chrome-tab">旧版本实现</div>
+        <div slot="content">
+          <p>
+            原始的 API 都是放在 document.body 身上，没有全屏容器栈的概念，自定义实现数组存储，自定义全局 class 
+          </p>
+        </div>
+        <div slot="nav" class="chrome-tab">❤新版本实现❤</div>
         <div slot="content">
           <p>
             伪类，伪元素介绍，新版本 API 
