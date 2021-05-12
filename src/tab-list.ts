@@ -15,7 +15,7 @@ const TEMPLATE = `
 .tab-nav ::slotted(*) {
   padding: 0 10px;
   border-bottom: 2px solid transparent;
-  font-size: 14px;
+  font-size: 16px;
   user-select: none;
   cursor: pointer;
 }
@@ -60,6 +60,7 @@ class TabList extends HTMLElement {
   render() {
     const shadow = this.attachShadow({ mode: 'open' })
     shadow.innerHTML = TEMPLATE
+    this.loadCSS()
   }
 
   setCurrent(tabIndex: number) {
@@ -113,6 +114,14 @@ class TabList extends HTMLElement {
         element.classList.remove(ACTIVE_CLASS)
       }
     })
+  }
+
+  loadCSS() {
+    const node = document.createElement('style');
+    node.innerHTML = `@import './src/tab-chrome.css';`;
+    if (this.shadowRoot) {
+      this.shadowRoot.append(node);
+    } 
   }
 }
 
