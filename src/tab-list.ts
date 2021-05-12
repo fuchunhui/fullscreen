@@ -117,11 +117,10 @@ class TabList extends HTMLElement {
   }
 
   loadCSS() {
-    const node = document.createElement('style');
-    node.innerHTML = `@import './src/tab-chrome.css';`;
-    if (this.shadowRoot) {
-      this.shadowRoot.append(node);
-    } 
+    const node = document.createElement('style')
+    const href = this.getAttribute('href')
+    node.innerHTML = `@import '${href}';`
+    this.shadowRoot?.append(node);
   }
 }
 

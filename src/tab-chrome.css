@@ -1,12 +1,39 @@
+tab-list * {
+  box-sizing: inherit;
+  font: inherit;
+}
+
 .tab-nav {
   box-sizing: border-box;
   position: relative;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 12px;
-  height: 46px;
-  padding: 8px 3px 4px 3px;
-  background: #dee1e6;
+  padding: 8px 3px 0px 3px;
+  background: #DEE1E6;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
-  color: red;
+}
+
+.tab-nav ::slotted(*) {
+  position: relative;
+  width: 229px;
+  height: 30px;
+  left: 0;
+  margin: 0;
+  padding: 0 0 0 10px;
+  border: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  line-height: 30px;
+  color: #45474A;
+  cursor: default;
+}
+
+.tab-nav ::slotted(:not(.active):hover) {
+  opacity: 0.8;
+  background-color: #F4F5F6;
+}
+
+.tab-nav ::slotted(.active) {
+  background-color: #FFFFFF;
 }
