@@ -5,22 +5,30 @@
     <link rel="icon" href="/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>fullscreen</title>
-    <style>
-      h3 {
-        margin: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="./src/css/fullscreen.css"/>
   </head>
   <body>
     <main id="main">
       <tab-list> 
-        <h3 slot="nav">原始需求</h3>
-        <div slot="content">
-          <p>
-            两个全屏，大框全屏后，还可以点击 panel 上的全屏按钮
-            实现外层带个 button 内部多个 panel 的示意图
-          </p>
-        </div>
+        <h3 slot="nav">需求示意图</h3>
+        <section slot="content">
+          <div class="parent">
+            <div class="tool">
+              <div class="case">全屏按钮</div>
+            </div>
+            <div class="content">
+              <div class="panel">
+                <div class="case">全屏按钮</div>
+              </div>
+              <div class="panel">
+                <div class="case">全屏按钮</div>
+              </div>
+              <div class="panel">
+                <div class="case">全屏按钮</div>
+              </div>
+            </div>
+          </div>
+        </section>
         <h3 slot="nav">旧版本实现</h3>
         <div slot="content">
           <p>
@@ -35,7 +43,7 @@
         </div>
       </tab-list>
       <!-- TODO url 替换为固定链接 unpkg -->
-      <tab-list href="./src/tab-chrome.css"> 
+      <!-- <tab-list href="./src/lib/tab-chrome.css"> 
         <div slot="nav" class="chrome-tab">原始需求</div>
         <div slot="content">
           <p>
@@ -55,7 +63,7 @@
             伪类，伪元素介绍，新版本 API 
           </p>
         </div>
-      </tab-list>
+      </tab-list> -->
     </main>
     <script type="module" src="./src/main.ts"></script>
   </body>
