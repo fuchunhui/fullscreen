@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>fullscreen🗞</title>
     
-  <script type="module" crossorigin src="/fullscreen/assets/index.b9dd4811.js"></script>
-  <link rel="stylesheet" href="/fullscreen/assets/index.d5ac42ad.css">
+  <script type="module" crossorigin src="/fullscreen/assets/index.2f86b033.js"></script>
+  <link rel="stylesheet" href="/fullscreen/assets/index.a9a0a003.css">
 </head>
   <body>
     <main id="main">
-      <tab-list> 
+      <tab-list data-index="2">
         <h3 slot="nav">需求示意图</h3>
         <section slot="content">
           <div class="parent">
@@ -34,49 +34,57 @@
           <p>按ESC所有都退出全屏，回到初始状态。如果是点击退出全屏按钮，就会依次退出全屏。</p>
           <p>需求的特殊在于，支持两个元素依次全屏。这个需求今天看属于小case，不过放在多年前的时代，需要一点技巧</p>
           <div class="special">
-            脱离框架的写Demo，好累。太累啦。
+            脱离框架的写Demo，好累好累，太累啦。
           </div>
         </section>
         <h3 slot="nav">早期API示例🧲</h3>
         <section id="oc" slot="content">
           <div class="parent container">
             <div class="tool">
-              <div class="case" onclick="togglefs(document.getElementById('oc'))">全屏按钮</div>
+              <div class="case" onclick="toggleofs(document.getElementById('oc'))">切换全屏</div>
             </div>
             <div class="content">
-              <div id="oc1" class="panel" onclick="togglefs(document.getElementById('oc1'))">
-                <div class="case post-credits-scene">全屏按钮</div>
+              <div id="oc1" class="panel">
+                <div class="case post-credits-scene" onclick="toggleofs(document.getElementById('oc1'))">切换全屏</div>
               </div>
-              <div id="oc2" class="panel" onclick="togglefs(document.getElementById('oc2'))">
-                <div class="case">全屏按钮</div>
+              <div id="oc2" class="panel">
+                <div class="case" onclick="toggleofs(document.getElementById('oc2'))">切换全屏</div>
               </div>
-              <div id="oc3" class="panel" onclick="togglefs(document.getElementById('oc3'))">
-                <div class="case">全屏按钮</div>
+              <div id="oc3" class="panel">
+                <div class="case" onclick="toggleofs(document.getElementById('oc3'))">切换全屏</div>
               </div>
             </div>
           </div>
-          <p>原始的API都是放在document.body身上，没有全屏容器栈的概念，自定义实现LIFO栈存储，自定义全局class模拟全屏</p>
+          <p>早期的的API是放在document.body身上，没有全屏容器栈的概念，需要自定义实现LIFO栈存储全屏元素，自定义全局class模拟全屏样式</p>
+          <p>操作相对麻烦，还需要解决全屏后样式，层级问题</p>
         </section>
-        <h3 slot="nav">❤当下API示例❤</h3>
+        <h3 slot="nav">❤最新API示例❤</h3>
         <section id="nc" slot="content">
           <div class="parent container">
             <div class="tool">
-              <div class="case" onclick="togglefs(document.getElementById('nc'))">全屏按钮</div>
+              <div class="case" onclick="togglenfs(document.getElementById('nc'))">切换全屏</div>
             </div>
             <div class="content">
-              <div id="nc1" class="panel" onclick="togglefs(document.getElementById('nc1'))">
-                <div class="case">全屏按钮</div>
+              <div id="nc1" class="panel">
+                <div class="case" onclick="togglenfs(document.getElementById('nc1'))">切换全屏</div>
               </div>
-              <div id="nc2" class="panel" onclick="togglefs(document.getElementById('nc2'))">
-                <div class="case">全屏按钮</div>
+              <div id="nc2" class="panel">
+                <div class="case" onclick="togglenfs(document.getElementById('nc2'))">切换全屏</div>
               </div>
-              <div id="nc3" class="panel" onclick="togglefs(document.getElementById('nc3'))">
-                <div>伪类</div>
+              <div id="nc3" class="panel">
+                <div class="case" onclick="togglenfs(document.getElementById('nc3'))">切换全屏</div>
+              </div>
+              <div id="nc4" class="panel pseudo-fullscreen">
+                <div class="case" onclick="togglenfs(document.getElementById('nc4'))">:fullscreen</div>
+              </div>
+              <div id="nc5" class="panel panel-backdrop">
+                <div class="case" onclick="togglenfs(document.getElementById('nc5'))">伪元素::backdrop</div>
               </div>
             </div>
           </div>
-          <p>现代浏览器提供了很多好用的特征</p>
-          <p>伪类，伪元素介绍，新版本 API </p>
+          <p>现代浏览器提供了很多好用的API，不用特别考虑兼容问题，支持元素的全屏操作，不需要自定义栈，不需要自定义class，全屏样式也是妥妥的</p>
+          <p>代码简简单单</p>
+          <p>伪类:fullscreen，伪元素::backdrop</p>
         </section>
       </tab-list>
       <!-- TODO url 替换为固定链接 unpkg -->
