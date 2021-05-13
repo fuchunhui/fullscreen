@@ -15,7 +15,6 @@ tab-list {
   height: 500px;
   background-color: gainsboro;
 }
-
 .tool {
   display: flex;
   align-items: center;
@@ -23,7 +22,6 @@ tab-list {
   background-color: azure;
   padding-left: 20px;
 }
-
 .case {
   width: 100px;
   height: 40px;
@@ -32,17 +30,14 @@ tab-list {
   border-radius: 10px;
   text-align: center;
 }
-
 .tool .case {
   background-color: yellow;
 }
-
 .content {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
 }
-
 .panel {
   display: flex;
   justify-content: center;
@@ -56,7 +51,6 @@ tab-list {
   border-radius: 10px;
   box-shadow: 0 1px 4px 0 rgba(58,135,255,0.20);
 }
-
 .container .case {
   cursor: pointer;
 }
@@ -68,7 +62,6 @@ tab-list {
   background-color: rgba(83, 84, 90, 0.57);
   opacity: 0.8;
 }
-
 .custom-fullscreen {
   position: fixed !important;
   width: 100%;
