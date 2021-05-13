@@ -127,8 +127,10 @@ class TabList extends HTMLElement {
   loadCSS() {
     const node = document.createElement('style')
     const href = this.getAttribute('href')
-    node.innerHTML = `@import '${href}';`
-    this.shadowRoot?.append(node);
+    if (href) {
+      node.innerHTML = `@import '${href}';`
+      this.shadowRoot?.append(node);
+    }
   }
 }
 
