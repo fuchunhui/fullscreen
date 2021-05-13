@@ -13,9 +13,11 @@ const TEMPLATE = `
   color: var(--tab-nav-color, #333333)
 }
 .tab-nav ::slotted(*) {
+  height: 28px;
   padding: 0 10px;
   border-bottom: 2px solid transparent;
   font-size: 16px;
+  line-height: 16px;
   user-select: none;
   cursor: pointer;
 }
@@ -41,7 +43,7 @@ const TEMPLATE = `
 const ACTIVE_CLASS = 'active'
 
 class TabList extends HTMLElement {
-  currentIndex = 0
+  currentIndex = 1
   constructor() {
     super()
     this.bindListeners()

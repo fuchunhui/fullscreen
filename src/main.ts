@@ -1,7 +1,12 @@
 import './tab-list'
 import pastTime from './past-time'
 
-const {requestFullscreen, exitFullscreen} = pastTime
-
-console.log('Hello World!');
-console.log(requestFullscreen, exitFullscreen)
+const {requestFullscreen, exitFullscreen, isFullscreen} = pastTime
+const togglefs = (element: Element) => {
+  if (isFullscreen(element)) {
+    exitFullscreen()
+  } else {
+    requestFullscreen(element)
+  }
+}
+window.togglefs = togglefs.bind(this)
