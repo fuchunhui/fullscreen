@@ -32,6 +32,7 @@
           </div>
           <p>点击顶部黄色全屏按钮，所有内容都全屏。再点击下部容器内的任意全屏按钮，小容器全屏。</p>
           <p>按ESC所有都退出全屏，回到初始状态。如果是点击退出全屏按钮，就会依次退出全屏。</p>
+          <p>需求的特殊在于，支持两个元素依次全屏。这个需求今天看属于小case，不过放在多年前的时代，需要一点技巧</p>
           <div class="special">
             脱离框架的写Demo，好累。太累啦。
           </div>
@@ -54,9 +55,7 @@
               </div>
             </div>
           </div>
-          <p>
-            原始的 API 都是放在 document.body 身上，没有全屏容器栈的概念，自定义实现数组存储，自定义全局 class 
-          </p>
+          <p>原始的API都是放在document.body身上，没有全屏容器栈的概念，自定义实现LIFO栈存储，自定义全局class模拟全屏</p>
         </section>
         <h3 slot="nav">❤当下API示例❤</h3>
         <section slot="content">
@@ -72,7 +71,7 @@
                 <div class="case">全屏按钮</div>
               </div>
               <div class="panel">
-                <div class="case">全屏按钮</div>
+                <div>伪类</div>
               </div>
             </div>
           </div>
