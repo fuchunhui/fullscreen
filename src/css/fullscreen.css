@@ -54,6 +54,28 @@ tab-list {
 .container .case {
   cursor: pointer;
 }
+.panel-backdrop {
+  background-color: transparent;
+}
+.panel-backdrop .case {
+  width: 160px;
+}
+.panel-backdrop::backdrop {
+  background-color: yellowgreen;
+}
+.pseudo-fullscreen .case {
+  position: relative;
+}
+.pseudo-fullscreen:fullscreen .case::after {
+  content: '';
+  position: absolute;
+  width: 616px;
+  height: 492px;
+  left: -258px;
+  top: -276px;
+  background: url('./fullscreen.png');
+  background-color: red;
+}
 
 .special {
   display: flex;
@@ -70,7 +92,6 @@ tab-list {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #FFF;
 }
 
 .post-credits-scene {
