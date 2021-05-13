@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>fullscreen🗞</title>
     
-  <script type="module" crossorigin src="/fullscreen/assets/index.56212520.js"></script>
-  <link rel="stylesheet" href="/fullscreen/assets/index.1f5c4b4d.css">
+  <script type="module" crossorigin src="/fullscreen/assets/index.b9dd4811.js"></script>
+  <link rel="stylesheet" href="/fullscreen/assets/index.d5ac42ad.css">
 </head>
   <body>
     <main id="main">
@@ -38,19 +38,19 @@
           </div>
         </section>
         <h3 slot="nav">早期API示例🧲</h3>
-        <section slot="content">
+        <section id="oc" slot="content">
           <div class="parent container">
             <div class="tool">
-              <div class="case">全屏按钮</div>
+              <div class="case" onclick="togglefs(document.getElementById('oc'))">全屏按钮</div>
             </div>
             <div class="content">
-              <div class="panel">
+              <div id="oc1" class="panel" onclick="togglefs(document.getElementById('oc1'))">
+                <div class="case post-credits-scene">全屏按钮</div>
+              </div>
+              <div id="oc2" class="panel" onclick="togglefs(document.getElementById('oc2'))">
                 <div class="case">全屏按钮</div>
               </div>
-              <div class="panel">
-                <div class="case">全屏按钮</div>
-              </div>
-              <div class="panel">
+              <div id="oc3" class="panel" onclick="togglefs(document.getElementById('oc3'))">
                 <div class="case">全屏按钮</div>
               </div>
             </div>
@@ -58,19 +58,19 @@
           <p>原始的API都是放在document.body身上，没有全屏容器栈的概念，自定义实现LIFO栈存储，自定义全局class模拟全屏</p>
         </section>
         <h3 slot="nav">❤当下API示例❤</h3>
-        <section slot="content">
+        <section id="nc" slot="content">
           <div class="parent container">
             <div class="tool">
-              <div class="case">全屏按钮</div>
+              <div class="case" onclick="togglefs(document.getElementById('nc'))">全屏按钮</div>
             </div>
             <div class="content">
-              <div class="panel">
+              <div id="nc1" class="panel" onclick="togglefs(document.getElementById('nc1'))">
                 <div class="case">全屏按钮</div>
               </div>
-              <div class="panel">
+              <div id="nc2" class="panel" onclick="togglefs(document.getElementById('nc2'))">
                 <div class="case">全屏按钮</div>
               </div>
-              <div class="panel">
+              <div id="nc3" class="panel" onclick="togglefs(document.getElementById('nc3'))">
                 <div>伪类</div>
               </div>
             </div>
