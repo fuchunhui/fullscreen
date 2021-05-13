@@ -65,3 +65,12 @@ tab-list {
   background-color: rgba(83, 84, 90, 0.57);
   opacity: 0.8;
 }
+
+.custom-fullscreen {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #FFF;
+}

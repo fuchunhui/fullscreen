@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "a talk about fullscreen api and pseudo-class.",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
