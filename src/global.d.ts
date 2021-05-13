@@ -2,6 +2,7 @@ export {}
 
 declare global {
   interface Window {
-    togglefs?: any;
+    toggleofs?: any;
+    togglenfs?: any;
   }
 }

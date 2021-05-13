@@ -43,10 +43,16 @@ const TEMPLATE = `
 const ACTIVE_CLASS = 'active'
 
 class TabList extends HTMLElement {
-  currentIndex = 1
+  currentIndex = 0
   constructor() {
     super()
+    this.setCurrentIndex()
     this.bindListeners()
+  }
+
+  setCurrentIndex() {
+    const index = this.getAttribute('data-index') ?? this.currentIndex
+    this.currentIndex = Number(index);
   }
 
   bindListeners() {
