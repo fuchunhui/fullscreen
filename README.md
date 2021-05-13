@@ -1,7 +1,8 @@
 # fullscreen
-about pseudo-class, fullscreen and backdrop.
+about pseudo-class :fullscreen and pseudo-element ::backdrop.
 
 ### TODO
-- [ ] tab components ? (length index click slot ?)
+- [x] tab components ? (length index click slot ?)
 - [ ] CDN unpkg or cdnjs (https://www.unpkg.com/ or https://github.com/cdnjs/cdnjs)
-- [ ] section content
+- [x] section content
+- [x] post-credits scene

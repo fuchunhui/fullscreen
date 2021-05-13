@@ -1,7 +1,7 @@
 {
   "name": "fullscreen",
   "version": "0.1.0",
-  "description": "a talk about fullscreen api and pseudo-class.",
+  "description": "a talk about fullscreen api",
   "main": "index.ts",
   "type": "module",
   "scripts": {
@@ -16,6 +16,8 @@
   "keywords": [
     "fullscreen",
     "pseudo-class",
+    "pseudo-element",
+    "::backdrop",
     "tablist"
   ],
   "author": "fuchunhui",
